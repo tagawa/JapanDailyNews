@@ -5,8 +5,8 @@ date: 2023-04-05 09:00:00 +0900
 file: https://archive.org/download/japandailynews/japandailynews_2023-04-05.mp3
 summary: "News from Japan for 2023-04-05"
 description: "English news from Japan for 2023-04-05"
-duration: "02:26"
-length: "146"
+duration: "02:18"
+length: "138"
 explicit: "no"
 keywords: "japan, daily, news"
 block: "no"
