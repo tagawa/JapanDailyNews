@@ -3,8 +3,8 @@ layout: post
 title: "Japan Daily News - 2023-04-04"
 date: 2023-04-04 09:00:00 +0900
 file: https://archive.org/download/japandailynews/japandailynews_2023-04-04.mp3
-summary: "News from Japan for 2023-04-03"
-description: "English news from Japan for 2023-04-03"
+summary: "News from Japan for 2023-04-04"
+description: "English news from Japan for 2023-04-04"
 duration: "02:26" 
 length: "146"
 explicit: "no" 
