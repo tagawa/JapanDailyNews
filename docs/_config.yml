@@ -17,7 +17,7 @@ url: "https://japandailynews.com" # the base hostname & protocol for your site
 twitter_username: ourmaninjapan
 github_username: tagawa
 
-permalink: /:year/:title.html
+#permalink: /:year/:title.html
 
 #Timezone
 timezone: Asia/Tokyo
