@@ -19,7 +19,7 @@
 			<itunes:name>{{ site.author }}</itunes:name>
 			<itunes:email>{{ site.email }}</itunes:email>
 		</itunes:owner>
-        <itunes:image href="{{ site.url }}{{ site.baseurl }}/images/itunes.jpg" />
+        <itunes:image href="{{ site.url }}{{ site.baseurl }}/images/itunes.png" />
     <itunes:category text="News">
         <itunes:category text="Daily News" />
     </itunes:category> 
@@ -31,13 +31,13 @@
         <itunes:author>{{ site.author }}</itunes:author>
         <itunes:subtitle>{{ site.title | xml_escape }}: {{ post.title | xml_escape }}</itunes:subtitle>
         <itunes:summary>{{ post.summary | xml_escape }}</itunes:summary>
-        <itunes:image href="{{ site.url }}/images/itunes.jpg" />
+        <itunes:image href="{{ site.url }}/images/itunes.png" />
         <enclosure url="{{ post.file }}" length="{{ post.length }}" type="audio/mp3"/>
         <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <itunes:duration>{{ post.duration }}</itunes:duration>
         <itunes:explicit>{{ post.explicit }}</itunes:explicit>
-        <description>{{ post.summary | xml_escape }} {{ post.description | xml_escape }} Show Notes Available at {{ site.url }}{{ site.baseurl }}{{ post.url }}.</description>
+        <description>{{ post.summary | xml_escape }} {{ post.description | xml_escape }} Transcription available at {{ site.url }}{{ site.baseurl }}{{ post.url }}.</description>
         <itunes:keywords>{{ post.keywords }}</itunes:keywords>
         <itunes:block>{{ post.block }}</itunes:block>
 		</item>
