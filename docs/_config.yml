@@ -20,7 +20,7 @@ github_username: tagawa
 permalink: /:year/:title.html
 
 #Timezone
-timezone: '+0900'
+timezone: Asia/Tokyo
 
 #Setup for Pages
 include: ['_pages']
