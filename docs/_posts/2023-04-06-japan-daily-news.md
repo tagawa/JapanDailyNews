@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Japan Daily News - 2023-04-06"
-date: 2023-04-06 08:15:30 +0900
+date: 2023-04-06 08:15:30 Asia/Tokyo
 file: https://archive.org/download/japandailynews/japandailynews_2023-04-06.mp3
 summary: "News from Japan for 2023-04-06"
 description: "English news from Japan for April 6th, 2023"
