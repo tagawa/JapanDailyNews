@@ -82,7 +82,7 @@ input {
 
 .button.button-primary,
 button.button-primary {
-  color: #fff;
+  color: $secondary-color;
   background-color: $primary-color;
   border-color: $primary-color;
 }
@@ -90,7 +90,7 @@ button.button-primary {
 
 .button.button-secondary,
 button.button-secondary {
-  color: #fff;
+  color: $primary-color;
   background-color: $secondary-color;
   border-color: $secondary-color;
 }
@@ -99,7 +99,7 @@ input {
   &[type="submit"].button-primary,
   &[type="reset"].button-primary,
   &[type="button"].button-primary {
-    color: #fff;
+    color: $secondary-color;
     background-color: $primary-color;
     border-color: $primary-color;
   }
@@ -107,14 +107,14 @@ input {
 
 .button.button-primary:hover,
 button.button-primary:hover {
-  color: #fff;
+  color: $primary-color;
   background-color: $secondary-color;
   border-color: $secondary-color;
 }
 
 .button.button-secondary:hover,
 button.button-secondary:hover {
-  color: #fff;
+  color: $secondary-color;
   background-color: $primary-color;
   border-color: $primary-color;
 }
@@ -123,7 +123,7 @@ input {
   &[type="submit"].button-primary:hover,
   &[type="reset"].button-primary:hover,
   &[type="button"].button-primary:hover {
-    color: #fff;
+    color: $primary-color;
     background-color: $secondary-color;
     border-color: $secondary-color;
   }
@@ -131,7 +131,7 @@ input {
 
 .button.button-primary:focus,
 button.button-primary:focus {
-  color: #fff;
+  color: $primary-color;
   background-color: $secondary-color;
   border-color: $secondary-color;
 }
@@ -140,7 +140,7 @@ input {
   &[type="submit"].button-primary:focus,
   &[type="reset"].button-primary:focus,
   &[type="button"].button-primary:focus {
-    color: #fff;
+    color: $primary-color;
     background-color: $secondary-color;
     border-color: $secondary-color;
   }
