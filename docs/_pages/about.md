@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "About Japan Daily News"
+summary: "Details of the tech stack for the Japan Daily News podcast."
 permalink: /about
 ---
 
