@@ -30,7 +30,7 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   display: block;
-  padding: .5em 0px; 
+  padding: .3em 0px; 
   border-bottom: 6px solid transparent;
 }
 
@@ -41,11 +41,6 @@ nav a:hover {
 }
 
 @media (#{$bp-larger-than-tablet}) {
-  nav li {
-    flex-grow: 1;
-    min-width: 30%;
-  }
-
   nav a {
     padding: 0.8em 0px;
   }
