@@ -65,7 +65,7 @@ def generate_audio(chat_content, voice_id, elevenlabs_api_key, today):
             data=json.dumps({
                 "text": chat_content,
                 "voice_settings": {
-                    "stability": 0.2,
+                    "stability": 0.3,
                     "similarity_boost": 1
                 }
             }),
