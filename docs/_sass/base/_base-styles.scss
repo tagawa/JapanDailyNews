@@ -23,16 +23,15 @@ body {
 a {
     color: $link-color;
     transition: all 0.4s ease;
+    text-decoration: underline;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, nav a {
     text-decoration: none;
 }
 
 a:hover {
     color: darken($link-color, 20%)
-}
-
-footer a {
-    text-decoration: none;
-    font-weight: bold;
 }
 
 
