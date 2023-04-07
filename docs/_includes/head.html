@@ -23,12 +23,16 @@
     <meta name="msapplication-config" content="/images/browserconfig.xml">
     <meta name="theme-color" content="#fc9552">
     
-<!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@ourmaninjapan" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{{ page.summary }}" />
-    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/images/japandailynews_logo_text_og.png" />    
+<!-- OpenGraph social media properties -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.summary }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/images/japandailynews_logo_text_og.png">
+    <meta property="og:url" content="https://japandailynews.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="Japan Daily News">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ourmaninjapan">
     
 <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="UOJPGCFT" defer></script>
