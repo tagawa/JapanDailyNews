@@ -6,7 +6,7 @@ permalink: /about
 
 ### What is this?
 
-Encouraged by friends in the [Tokyo Tech](https://tokyotech.com) community, this podcast uses AI to generate natural English summaries of NHK news stories, then converts those summaries into human-sounding speech. The result is short, easy-to-consume English news updates that are directly from a Japanese source.
+Encouraged by friends in the [Tokyo Tech](https://tokyotech.com) community, this podcast uses AI to generate natural English summaries of NHK news stories, which are then converted into human-sounding speech. The result is short, easy-to-digest English news updates that are directly from a Japanese source.
 
 ### Technology used
 
@@ -18,3 +18,4 @@ Encouraged by friends in the [Tokyo Tech](https://tokyotech.com) community, this
 * Text-to-speech: [ElevenLabs API](https://beta.elevenlabs.io)
 * Programming: Good ol' [Python](https://www.python.org)
 
+The code is open source (MIT license) and [hosted on GitHub](https://github.com/tagawa/JapanDailyNews).
