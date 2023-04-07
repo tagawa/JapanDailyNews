@@ -1,13 +1,15 @@
 nav {
   text-align: center;
-  margin-top: 0px; }
+  margin-top: 0px;
+}
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none !important;
   margin: 0px 0px;
-  padding: 0; }
+  padding: 0;
+}
 
 nav li {
   flex-grow: 1;
@@ -19,6 +21,7 @@ nav li {
   background: -moz-$dark-gradient;
   background: -webkit-$dark-gradient;
   background: $dark-gradient;
+}
 
 nav a {
   color: #fff;
@@ -38,7 +41,10 @@ nav a:hover {
 @media (#{$bp-larger-than-tablet}) {
   nav li {
     flex-grow: 1;
-    min-width: 30%; }
+    min-width: 30%;
+  }
 
   nav a {
-    padding: 0.8em 0px; } }
+    padding: 0.8em 0px;
+  }
+}
