@@ -10,8 +10,8 @@ Encouraged by friends in the [Tokyo Tech](https://tokyotech.com) community, this
 
 ### Technology used
 
-* Website: [GitHub pages](https://pages.github.com/) and the [Jekyll static site generator](https://jekyllrb.com/).
-* Theme: [LinkRot podcast theme](https://github.com/timklapdor/link-rot)]
+* Website: [GitHub pages](https://pages.github.com/) and the [Jekyll static site generator](https://jekyllrb.com/)
+* Theme: [LinkRot podcast theme](https://github.com/timklapdor/link-rot)
 * Audio file hosting: [Internet Archive](https://archive.org/details/japandailynews/)
 * News source: [NHK RSS feeds](https://www.nhk.or.jp/toppage/rss/index.html)
 * English-language summaries: [OpenAI API](https://platform.openai.com)
