@@ -1,9 +1,4 @@
-h1 {
-    font-weight: 900;
-}
-
 h2 {
-    font-weight: 500;
  //   border-bottom: 4px solid $primary-color;
     margin-left: -.5em;
     margin-right: -.5em;
@@ -36,7 +31,6 @@ h5 {
 }
 
 h6 {
-    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -115,8 +109,4 @@ blockquote {
 
 .meta {
     font-style: italic;
-}
-
-.header {
-    font-weight: 300;
 }

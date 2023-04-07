@@ -5,8 +5,7 @@
 }
 
 header {
-    min-height: 50vh;
-    max-height: 60vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +28,7 @@ header a:hover {
 
 .logo {
     padding: 0px;
-    height: 60vh;    
+    height: 50vh;    
 }
 
 article {
