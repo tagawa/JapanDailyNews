@@ -35,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: $secondary-color;
+  background: darken($secondary-color, 10%);
   color: #fff; 
   border-bottom: 6px solid $primary-color;
 }
