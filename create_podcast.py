@@ -40,13 +40,14 @@ def fetch_stories(news_feed_url, limit=10):
 
 
 def generate_chat_content(stories, today):
+    prompt = "Here are some Japanese news headlines and summaries for today (" + today + "). First, combine related stories into a single news story Don't repeat similar news stories. Second, ignore any very short-term news stories such as a train delay. Third, rewrite the news stories in English in a discussion way, as though someone is talking about them one by one on the 'Japan Daily News' podcast in a non-judgemental way and with no follow-on discussion. Fourth, and an opening greeting (mentioning 'Japan Daily News' and the date) and a closing greeting (mentioning 'Japan Daily News'). "
+    
     try:
         chat_output = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[{
                 "role": "user",
-                "content": "Here are some Japanese news headlines and summaries for today (" + today + "). Please rewrite them in English in a discussion way, as though someone is talking about them one by one on the 'Japan Daily News' podcast in a non-judgemental way and with no follow-on discussion, although there should be an opening greeting (mentioning the date) and closing greeting. Please combine any news stories that cover the same topic: "
-                + stories
+                "content": prompt + " NEWS STORIES: " + stories
             }],
             temperature=0.5
         )
@@ -301,10 +302,10 @@ def main():
 
     stories = process_rss_feed(config['news_feed'])
     chat_content = process_chat_gpt(config['openai_api_key'], stories, today)
-    output_file_name = process_audio_and_metadata(chat_content, config['elevenlabs_api_key'], today)
-    create_text_files(chat_content, today, output_file_name)
-    upload_to_archive(config, output_file_name, today)
-    upload_to_github(config['github_token'], config['github_repo'], f"{today}-news.md", f"Add {today} Japan Daily News")
+    #output_file_name = process_audio_and_metadata(chat_content, config['elevenlabs_api_key'], today)
+    #create_text_files(chat_content, today, output_file_name)
+    #upload_to_archive(config, output_file_name, today)
+    #upload_to_github(config['github_token'], config['github_repo'], f"{today}-news.md", f"Add {today} Japan Daily News")
     
 
     print("## Processing complete")
