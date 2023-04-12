@@ -33,14 +33,15 @@ def fetch_stories(news_feed_url, limit=10):
 
     stories = "".join(
         f" New Story: {item.title}. {item.description}"
-        for item in feed.entries[:limit]
+        for item in feed.entries[:limit] if hasattr(item, 'description')
     )
 
     return stories
 
 
+
 def generate_chat_content(stories, today):
-    prompt = "Here are some Japanese news headlines and summaries for today (" + today + "). First, combine related stories into a single news story Don't repeat similar news stories. Second, ignore any very short-term news stories such as a train delay. Third, rewrite the news stories in English in a discussion way, as though someone is talking about them one by one on the 'Japan Daily News' podcast in a non-judgemental way and with no follow-on discussion. Fourth, and an opening greeting (mentioning 'Japan Daily News' and the date) and a closing greeting (mentioning 'Japan Daily News'). "
+    prompt = "Here are some Japanese news headlines and summaries for today (" + today + "). First, combine related stories into a single news story Don't repeat similar news stories. Second, ignore any very short-term news stories such as a train delay. Third, rewrite the news stories in English in a discussion way, as though someone is talking about them one by one on the 'Japan Daily News' podcast in a non-judgemental way and with no follow-on discussion. Fourth, append an ellipsis to the final sentence of each news story summary. Fifth, add an opening greeting (mentioning 'Japan Daily News' and the date) and a closing greeting (mentioning 'Japan Daily News'). "
     
     try:
         chat_output = openai.ChatCompletion.create(
