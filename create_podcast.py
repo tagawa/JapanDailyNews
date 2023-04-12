@@ -302,10 +302,10 @@ def main():
 
     stories = process_rss_feed(config['news_feed'])
     chat_content = process_chat_gpt(config['openai_api_key'], stories, today)
-    #output_file_name = process_audio_and_metadata(chat_content, config['elevenlabs_api_key'], today)
-    #create_text_files(chat_content, today, output_file_name)
-    #upload_to_archive(config, output_file_name, today)
-    #upload_to_github(config['github_token'], config['github_repo'], f"{today}-news.md", f"Add {today} Japan Daily News")
+    output_file_name = process_audio_and_metadata(chat_content, config['elevenlabs_api_key'], today)
+    create_text_files(chat_content, today, output_file_name)
+    upload_to_archive(config, output_file_name, today)
+    upload_to_github(config['github_token'], config['github_repo'], f"{today}-news.md", f"Add {today} Japan Daily News")
     
 
     print("## Processing complete")
