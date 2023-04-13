@@ -23,6 +23,7 @@
     <itunes:category text="News">
         <itunes:category text="Daily News" />
     </itunes:category> 
+    <itunes:category text="Technology" />
     <itunes:explicit>no</itunes:explicit>
 
 {% for post in site.posts %}
