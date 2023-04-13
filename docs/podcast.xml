@@ -22,8 +22,7 @@
         <itunes:image href="{{ site.url }}{{ site.baseurl }}/images/itunes.png" />
     <itunes:category text="News">
         <itunes:category text="Daily News" />
-    </itunes:category> 
-    <itunes:category text="Technology" />
+    </itunes:category>
     <itunes:explicit>no</itunes:explicit>
 
 {% for post in site.posts %}
