@@ -25,3 +25,20 @@ layout: default
 
 </article>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ page.summary }}",
+  "datePublished": "{{ page.date }}",
+  "author":
+  [
+    {
+      "@type":"Organization",
+      "name": "Japan Daily News",
+      "url": "https://japandailynews.com/"
+    }
+  ],
+  "url": "{{ page.url }}"
+}
+</script>
