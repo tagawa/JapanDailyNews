@@ -9,6 +9,8 @@ permalink: /about
 
 Encouraged by friends in the [Tokyo Tech](https://tokyotech.com) community, this podcast uses AI to generate natural English summaries of NHK news stories, which are then converted into human-sounding speech. The result is short, easy-to-digest English news updates that are directly from a Japanese source.
 
+Simiarly, I also made a site and podcast providing [tech news from Japan (TotemoTech)](https://totemotech.com).
+
 ### Technology used
 
 * Website: [GitHub pages](https://pages.github.com/) and the [Jekyll static site generator](https://jekyllrb.com/)
