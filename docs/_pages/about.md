@@ -21,4 +21,4 @@ Simiarly, I also made a site and podcast providing [tech news from Japan (Totemo
 * Text-to-speech: [ElevenLabs API](https://beta.elevenlabs.io)
 * Programming: Good ol' [Python](https://www.python.org)
 
-The code is open source (MIT license) and [hosted on GitHub](https://github.com/tagawa/JapanDailyNews).
+The code is open source (MIT license) and [hosted on GitHub](https://github.com/tagawa/JapanDailyNews).  I also have a video course where I explain how to generate the audio files: [ChatGPT-to-Speech: Build an AI-Powered Podcast With Python](https://www.udemy.com/course/ai-chatgpt-to-speech-with-python/?referralCode=6F94B03A927734DA0043)
