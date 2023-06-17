@@ -8,25 +8,6 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 
 {% assign latest_post = site.posts | first %}
 <article class="post">
-  <h1>{{ latest_post.title }}</h1>
-  <p>Date: {{ latest_post.date | date_to_string }}</p>
-  <audio controls>
-    <source src="{{ latest_post.file }}" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <p>{{ latest_post.summary }}</p>
-  <p>{{ latest_post.description }}</p>
-  <p>Duration: {{ latest_post.duration }}</p>
-  <p>Length: {{ latest_post.length }}</p>
-  <p>Keywords: {{ latest_post.keywords }}</p>
-  <p>Block: {{ latest_post.block }}</p>
-  <p>Voices: {{ latest_post.voices }}</p>
-  <hr>
-  <h2>Transcript</h2>
-  {{ latest_post.content }}
-
-
-
   
     <h1 class="u-full-width" >{{ latest_post.title }}</h1>
        
