@@ -21,6 +21,7 @@ github_username: tagawa
 
 #Timezone
 timezone: Asia/Tokyo
+future: false
 
 #Setup for Pages
 include: ['_pages']
