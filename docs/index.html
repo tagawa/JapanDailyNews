@@ -7,7 +7,7 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 
 
 {% assign latest_post = site.posts | first %}
-<article>
+<article class="post">
   <h1>{{ latest_post.title }}</h1>
   <p>Date: {{ latest_post.date | date_to_string }}</p>
   <audio controls>
@@ -18,7 +18,6 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
   <p>{{ latest_post.description }}</p>
   <p>Duration: {{ latest_post.duration }}</p>
   <p>Length: {{ latest_post.length }}</p>
-  <p>Explicit: {{ latest_post.explicit }}</p>
   <p>Keywords: {{ latest_post.keywords }}</p>
   <p>Block: {{ latest_post.block }}</p>
   <p>Voices: {{ latest_post.voices }}</p>
@@ -29,36 +28,51 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 
 
 
-<div class="card-grid">
-<!--     -->
+---
+layout: default
+---
+<article class="post" >
+
+    <h1 class="u-full-width" >{{ latest_post.title }}</h1>
+       
+    <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time> | Read by {{ latest_post.voices }}</p>
     
-    {% assign first_post = site.posts.first %}
-    <div class="cards first">
-        <h1 class="label reversed">Latest Episode</h1>
-        <div class="center-content">
-            <div class="seven columns">
-                <h2><a class="post-link" href="{{ first_post.url | prepend: site.baseurl }}">{{ first_post.title }}</a></h2>
-                
-                <p class="meta">{{ first_post.date | date: "%b %-d, %Y" }}</p>
-                <p>{{ first_post.summary }} </p> 
-            </div>
-            <div class="four columns center-content">
-                <a href="{{ first_post.file }}" class="button button-primary" download="{{ first_post.title }}">Download Now</a>    
-            </div>
-        </div>            
+    <div class="container center-content">
+    <div class="seven columns">
+    <audio controls>
+        <source src="{{ latest_post.file }}" type="audio/mp3">
+    </audio>
+    </div>
+    <div class="four columns center-content">
+    <a href="{{ site.baseurl }}{{ latest_post.file }}" class="button u-full-height" download="{{ latest_post.title }}">Download Now</a>
+    </div>
         </div>
+<div>
+    {{ content }}
     
-    {% for post in site.posts offset:1 %}
-        <div class="cards">
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p class="meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <p>{{ post.summary }} </p>
-        </div>
-    {% endfor %}
-    
+    <p><em>Keywords - {{ latest_post.keywords }}</em></p>
 </div>
 
-<div class="container center-content extra-padding">
-</div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ latest_post.summary }}",
+  "datePublished": "{{ latest_post.date }}",
+  "author":
+  [
+    {
+      "@type":"Organization",
+      "name": "Japan Daily News",
+      "url": "https://japandailynews.com/"
+    }
+  ],
+  "url": "{{ latest_post.url }}"
+}
+</script>
+
+
+
+
