@@ -24,15 +24,10 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
   <hr>
   <h2>Transcript</h2>
   {{ latest_post.content }}
-</article>
 
 
 
----
-layout: default
----
-<article class="post" >
-
+  
     <h1 class="u-full-width" >{{ latest_post.title }}</h1>
        
     <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time> | Read by {{ latest_post.voices }}</p>
@@ -48,7 +43,7 @@ layout: default
     </div>
         </div>
 <div>
-    {{ content }}
+    {{ latest_post.content }}
     
     <p><em>Keywords - {{ latest_post.keywords }}</em></p>
 </div>
