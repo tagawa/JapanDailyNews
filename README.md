@@ -14,8 +14,8 @@ https://user-images.githubusercontent.com/94173/230608571-5a146983-b6d0-45a3-932
 - Theme: [LinkRot podcast theme](https://github.com/timklapdor/link-rot)
 - Audio file hosting: [Internet Archive](https://archive.org/details/japandailynews/)
 - News source: [NHK RSS feed](https://www.nhk.or.jp/toppage/rss/index.html)
-- English-language summaries: [OpenAI API](https://platform.openai.com/)
-- Text-to-speech: [ElevenLabs API](https://beta.elevenlabs.io/)
+- English-language summaries: [OpenAI API (GPT)](https://platform.openai.com/)
+- Text-to-speech: [ElevenLabs API](https://elevenlabs.io/) – see my [ElevenLabs API Python tutorial](https://puppycoding.com/2023/08/24/elevenlabs-api-python-tutorial/)
 - Programming: Good ol’ Python
 
 ![japan-daily-news-flow](https://user-images.githubusercontent.com/94173/230608300-702e7872-1c36-425a-b2d9-671e17c87515.png)
