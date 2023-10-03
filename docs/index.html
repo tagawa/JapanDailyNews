@@ -9,7 +9,7 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
   
     <h1 class="u-full-width" >{{ latest_post.title }}</h1>
        
-    <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time> | Read by {{ latest_post.voices }}</p>
+    <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time> | </p>
     
     <div class="container center-content">
     <div class="six columns center-content">
@@ -30,6 +30,8 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
     </div>
 <div>
     {{ latest_post.content }}
+
+    <p><em>Audio read by {{ latest_post.voices }}</em></p>
     
     <p><em>Keywords - {{ latest_post.keywords }}</em></p>
 </div>
