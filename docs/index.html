@@ -13,7 +13,7 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
       
         {% if latest_post.weather_image != blank and latest_post.weather_maxtemp != blank and latest_post.weather_description != blank -%}
             <img src="/images/weather/{{ latest_post.weather_image }}" alt="{{ latest_post.weather_description }}." style="max-height: 24px; margin: 0 0.5em 0 1em; vertical-align: middle;">
-            Max {{ latest_post.weather_maxtemp }}°C
+            Max. {{ latest_post.weather_maxtemp }}°C
         {%- endif %}
     </p>
     
