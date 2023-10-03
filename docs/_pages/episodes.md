@@ -21,7 +21,7 @@ permalink: /episodes
                 <p>{{ first_post.summary }} </p> 
             </div>
             <div class="four columns center-content">
-                <a href="{{ first_post.file }}" class="button button-primary" download="{{ first_post.title }}">Download Now</a>    
+                <a href="{{ first_post.file }}" class="button button-primary" download="{{ first_post.title }}">Download audio</a>    
             </div>
         </div>            
         </div>
