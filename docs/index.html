@@ -9,24 +9,23 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
   
     <h1 class="u-full-width" >{{ latest_post.title }}</h1>
        
-    <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time> | </p>
+    <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time>
+      
+        {% if latest_post.weather_image != blank and latest_post.weather_maxtemp != blank and latest_post.weather_description != blank -%}
+            <img src="/images/weather/{{ latest_post.weather_image }}" alt="{{ latest_post.weather_description }}." style="max-height: 24px; margin: 0 0.5em 0 1em; vertical-align: middle;">
+            {{ latest_post.weather_maxtemp }}°C
+        {%- endif %}
+    </p>
     
     <div class="container center-content">
-    <div class="six columns center-content">
-    <audio controls>
-        <source src="{{ latest_post.file }}" type="audio/mp3">
-    </audio>
-    </div>
-    <div class="four columns center-content">
-        <a href="{{ site.baseurl }}{{ latest_post.file }}" class="button u-full-height" download="{{ latest_post.title }}">Download Now</a>
-    </div>
-
-    {% if latest_post.weather_image != blank and latest_post.weather_maxtemp != blank and latest_post.weather_description != blank -%}
-        <div class="two columns center-content"><img src="/images/weather/{{ latest_post.weather_image }}" alt="{{ latest_post.weather_description }}." style="max-height:48px; margin-right: 8px;">
-            {{ latest_post.weather_maxtemp }}°C
+        <div class="six columns center-content">
+            <audio controls>
+                <source src="{{ latest_post.file }}" type="audio/mp3">
+            </audio>
         </div>
-    {%- endif %}
-
+        <div class="four columns center-content">
+            <a href="{{ site.baseurl }}{{ latest_post.file }}" class="button u-full-height" download="{{ latest_post.title }}">Download Now</a>
+        </div>
     </div>
 <div>
     {{ latest_post.content }}
