@@ -24,6 +24,10 @@
   box-sizing: border-box;
 }
 
+.post-audio {
+  margin-bottom: 1em;
+}
+
 // For devices larger than 400px
 @media (#{$bp-larger-than-mobile}) {
   .container {
