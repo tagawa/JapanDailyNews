@@ -43,14 +43,14 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
   <aside class="sidebar">
       <h2>Today's Proverb</h2>
 
-      <picture>
-        <img src="/images/proverbs/proverb_{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}." style="max-width: 200px;">
+      <picture class="proverb">
+        <img src="/images/proverbs/proverb_{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}" style="max-width: 200px;">
       </picture>
       
       <p>{{ latest_post.proverb_ja }}</p>
       <p>({{ latest_post.proverb_hiragana }})</p>
       <p>{{ latest_post.proverb_en }}</p>
-      <p>{{ latest_post.proverb_lit }}</p>
+      <p>Literally: {{ latest_post.proverb_lit }}</p>
   </aside>
 
 {%- endif %}
