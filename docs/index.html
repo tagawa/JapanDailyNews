@@ -37,6 +37,21 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 
 </article>
 
+
+{% if latest_post.proverb_ja != blank and latest_post.proverb_hiragana != blank and latest_post.proverb_en != blank and latest_post.proverb_lit != blank -%}
+  
+  <aside class="sidebar">
+      <h2>Today's Proverb</h2>
+      
+      <p>{{ latest_post.proverb_ja }}</p>
+      <p>({{ latest_post.proverb_hiragana }})</p>
+      <p>{{ latest_post.proverb_en }}</p>
+      <p>{{ latest_post.proverb_lit }}</p>
+  </aside>
+
+{%- endif %}
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
