@@ -46,9 +46,8 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
               <img src="/images/proverbs/proverb_{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}" style="max-width: 200px;" class="illustration">
           </picture>
           
-          <p>{{ latest_post.proverb_ja }}<br>({{ latest_post.proverb_hiragana }})</p>
-          <p>{{ latest_post.proverb_en }}</p>
-          <p>Literally: {{ latest_post.proverb_lit }}</p>
+          <p>{{ latest_post.proverb_ja }}<br><small>({{ latest_post.proverb_hiragana }})</small></p>
+          <p>{{ latest_post.proverb_en }}<br><small>Literally: {{ latest_post.proverb_lit }}</small></p>
         </div>
       {%- endif %}
     
