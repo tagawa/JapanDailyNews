@@ -12,7 +12,7 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
     <p class="post-meta"><time datetime="{{ latest_post.date | date_to_xmlschema }}" itemprop="datePublished">{{ latest_post.date | date: "%b %-d, %Y" }}</time>
       
         {% if latest_post.weather_image != blank and latest_post.weather_maxtemp != blank and latest_post.weather_description != blank -%}
-            <img src="/images/weather/{{ latest_post.weather_image }}" alt="{{ latest_post.weather_description }}." style="max-height: 24px; margin: 0 0.5em 0 1em; vertical-align: middle;">
+            <img src="/images/weather/{{ latest_post.weather_image }}" alt="{{ latest_post.weather_description }}." title="{{ latest_post.weather_description }}." style="max-height: 24px; margin: 0 0.5em 0 1em; vertical-align: middle;">
             Max. {{ latest_post.weather_maxtemp }}°C
         {%- endif %}
     </p>
@@ -38,10 +38,14 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 </article>
 
 
-{% if latest_post.proverb_ja != blank and latest_post.proverb_hiragana != blank and latest_post.proverb_en != blank and latest_post.proverb_lit != blank -%}
+{% if latest_post.proverb_id != blank and latest_post.proverb_ja != blank and latest_post.proverb_hiragana != blank and latest_post.proverb_en != blank and latest_post.proverb_lit != blank -%}
   
   <aside class="sidebar">
       <h2>Today's Proverb</h2>
+
+      <picture>
+        <img src="/images/weather/{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}." style="max-width: 200px;">
+      </picture>
       
       <p>{{ latest_post.proverb_ja }}</p>
       <p>({{ latest_post.proverb_hiragana }})</p>
