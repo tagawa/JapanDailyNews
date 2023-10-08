@@ -76,13 +76,9 @@ footer p {
 
 /* Large Screens: Media Query */
 @media (min-width: 750px) {
-    .container {
+    article.container .post {
         display: flex;
         flex-wrap: nowrap;
-    }
-
-    .main-content {
-        flex: 3;
     }
 
     .sidebar {
