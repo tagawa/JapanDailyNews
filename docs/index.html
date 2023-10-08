@@ -5,7 +5,8 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 ---
 
 {% assign latest_post = site.posts | first %}
-<article class="post">
+<main class="post">
+  <article>
   
     <h1 class="u-full-width" >{{ latest_post.title }}</h1>
        
@@ -84,7 +85,4 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
   "url": "{{ latest_post.url }}"
 }
 </script>
-
-
-
-
+</main>
