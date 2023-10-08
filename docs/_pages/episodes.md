@@ -4,7 +4,7 @@ title: "Episodes from Japan Daily News"
 summary: Recent news from Japan, powered by AI. This computer-generated daily podcast covers the most important stories from Japan in easy-to-digest 2-minute episodes.
 permalink: /episodes
 ---
-
+<main class="list">
 <p><strong>Japan Daily News</strong> brings you today's news from Japan, powered by AI. This computer-generated daily podcast covers the most important stories from Japan in easy-to-digest 2-minute episodes – listen while brushing your teeth!</p>
 
 <div class="card-grid">
@@ -37,3 +37,4 @@ permalink: /episodes
     {% endfor %}
     
 </div>
+</main>
