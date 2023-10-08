@@ -17,6 +17,7 @@ Simiarly, I also made a site and podcast providing [tech news from Japan (Totemo
 * Theme: [LinkRot podcast theme](https://github.com/timklapdor/link-rot)
 * Audio file hosting: [Internet Archive](https://archive.org/details/japandailynews/)
 * News source: [NHK RSS feeds](https://www.nhk.or.jp/toppage/rss/index.html)
+* Currency rates source: [Frankfurter](https://www.frankfurter.app)
 * English-language summaries: [OpenAI API (GPT)](https://platform.openai.com)
 * Text-to-speech: [ElevenLabs API](https://elevenlabs.io/) – see my [ElevenLabs API Python tutorial](https://puppycoding.com/2023/08/24/elevenlabs-api-python-tutorial/)
 * Programming: Good ol' [Python](https://www.python.org)
