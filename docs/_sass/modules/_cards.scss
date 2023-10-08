@@ -18,9 +18,9 @@
 //            max-width: 50%;    
     width: 44%;
     background: rgba(240,240,240,1);
+    border-radius: $global-radius;
     padding: 1em;
     margin: 0.5em;
-    box-shadow: 0px 1em 1em 0px rgba(0,0,0,0.1); 
 }
 
 .cards:first-of-type {
