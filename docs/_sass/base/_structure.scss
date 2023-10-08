@@ -73,11 +73,10 @@ footer p {
 
 /* Large Screens: Media Query */
 @media (min-width: 750px) {
-    article.container .post {
+    article.container {
         display: flex;
-        flex-wrap: nowrap;
     }
-
+    
     .sidebar {
         flex: 1;
         margin-left: 2rem;
