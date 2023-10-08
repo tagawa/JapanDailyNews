@@ -37,23 +37,35 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 
 </article>
 
-
-{% if latest_post.proverb_id != blank and latest_post.proverb_ja != blank and latest_post.proverb_hiragana != blank and latest_post.proverb_en != blank and latest_post.proverb_lit != blank -%}
-  
   <aside class="sidebar">
-      <h2>Today's Proverb</h2>
-
-      <picture>
-          <img src="/images/proverbs/proverb_{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}" style="max-width: 200px;" class="illustration">
-      </picture>
-      
-      <p>{{ latest_post.proverb_ja }}</p>
-      <p>({{ latest_post.proverb_hiragana }})</p>
-      <p>{{ latest_post.proverb_en }}</p>
-      <p>Literally: {{ latest_post.proverb_lit }}</p>
+      {% if latest_post.proverb_id != blank and latest_post.proverb_ja != blank and latest_post.proverb_hiragana != blank and latest_post.proverb_en != blank and latest_post.proverb_lit != blank -%}
+        <div id="proverb">
+          <h2>Today's Proverb</h2>
+    
+          <picture>
+              <img src="/images/proverbs/proverb_{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}" style="max-width: 200px;" class="illustration">
+          </picture>
+          
+          <p>{{ latest_post.proverb_ja }}<br>({{ latest_post.proverb_hiragana }})</p>
+          <p>{{ latest_post.proverb_en }}</p>
+          <p>Literally: {{ latest_post.proverb_lit }}</p>
+        </div>
+      {%- endif %}
+    
+      {% if latest_post.currency_usd != blank and latest_post.currency_gbp != blank and latest_post.currency_eur != blank and latest_post.currency_cad != blank and latest_post.currency_aud != blank -%}
+        <div id="currency">
+          <h2>Currency Rates</h2>
+          
+          <ul>
+              <li>USD/JPY: {{ latest_post.currency_usd }}</li>
+              <li>GBP/JPY: {{ latest_post.currency_gbp }}</li>
+              <li>EUR/JPY: {{ latest_post.currency_eur }}</li>
+              <li>CAD/JPY: {{ latest_post.currency_cad }}</li>
+              <li>AUD/JPY: {{ latest_post.currency_aud }}</li>
+          </ul>
+        </div>
+      {%- endif %}
   </aside>
-
-{%- endif %}
 
 
 <script type="application/ld+json">
