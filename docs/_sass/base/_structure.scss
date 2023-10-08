@@ -53,3 +53,42 @@ footer p {
     text-align: right;
     margin: 0;
 }
+
+
+/* Structure for sidebar */
+/* Small Screens: Default Style */
+.container {
+    display: block;
+}
+.main-content {
+    width: 100%;
+}
+.sidebar {
+    background-color: $light-grey;
+    border-radius: $global-radius;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: 90%;
+}
+.sidebar h2 {
+    font-size: 1.5em;
+}
+
+/* Large Screens: Media Query */
+@media (min-width: 750px) {
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .main-content {
+        flex: 3;
+    }
+
+    .sidebar {
+        flex: 1;
+        margin-left: 2rem;
+        min-width: 200px;
+        width: 100%;
+    }
+}
