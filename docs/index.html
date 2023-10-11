@@ -41,11 +41,11 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
         <div id="proverb">
           <h2>Today's Proverb</h2>
 
-          {% assign image_path = "/images/proverbs/proverb_" | append: latest_post.proverb_id | append: "webp" %}
+          {% assign image_path = "/images/proverbs/proverb_" | append: latest_post.proverb_id | append: ".webp" %}
           {% assign file = site.static_files | where: "path", image_path | first %}
           {% if file %}
             <picture>
-                <img src="/images/proverbs/proverb_{{ latest_post.proverb_id }}.webp" alt="Illustration representing the proverb {{ latest_post.proverb_en }}" style="max-width: 200px;" class="illustration">
+                <img src="{{ image_path }}" alt="Illustration representing the proverb {{ latest_post.proverb_en }}" style="max-width: 200px;" class="illustration">
             </picture>
           {% endif %}
           
