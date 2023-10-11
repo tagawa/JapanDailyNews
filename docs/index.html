@@ -48,9 +48,9 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
           <p>{{ latest_post.proverb_ja }}<br><small>({{ latest_post.proverb_hiragana }})</small>
 
             {% for static_file in site.static_files %}
-                {% if static_file.path == "/audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" %}
+                {% if static_file.path == "audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" %}
                   <audio controls>
-                      <source src="/audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" type="audio/mp3">
+                      <source src="audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" type="audio/mp3">
                   </audio>
                 {% endif %}
             {% endfor %}
