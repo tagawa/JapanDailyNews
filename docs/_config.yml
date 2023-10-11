@@ -23,6 +23,10 @@ defaults:
       path: "audio/proverbs"
     values:
       audio: true
+  - scope:
+      path: "images/proverbs"
+    values:
+      image: true
 
 #permalink: /:year/:title.html
 
