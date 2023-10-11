@@ -17,17 +17,6 @@ url: "https://japandailynews.com" # the base hostname & protocol for your site
 twitter_username: ourmaninjapan
 github_username: tagawa
 
-# Static files
-defaults:
-  - scope:
-      path: "audio/proverbs"
-    values:
-      audio: true
-  - scope:
-      path: "images/proverbs"
-    values:
-      image: true
-
 #permalink: /:year/:title.html
 
 #Timezone
