@@ -47,24 +47,36 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
           
           <p>{{ latest_post.proverb_ja }}<br><small>({{ latest_post.proverb_hiragana }})</small>
 
+            {% assign audio_path = "/audio/proverbs/proverb_" | append: latest_post.proverb_id | append: ".mp3" %}
+            {% assign file = site.static_files | where: "path", audio_path | first %}
+            {% if file %}
+              <audio controls>
+                  <source src="{{ audio_path }}" type="audio/mp3">
+              </audio>
+            {% endif %}
+
+
             {% assign audio_files = site.static_files | where: "audio", true %}
             {% for audio_file in audio_files %}
                 {% if audio_file.path == "audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" %}
                   <audio controls>
-                      <source src="audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" type="audio/mp3">
+                      <source src="/audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" type="audio/mp3">
                   </audio>
                 {% endif %}
-              {{ audio_file.path }}
             {% endfor %}
 
+            
             {% assign audio_files = site.static_files | where: "audio", true %}
             {% for audio_file in audio_files %}
+                {% assign audio_path = "/audio/proverbs/proverb_" | append: latest_post.proverb_id | append: ".mp3" %}
+                {% assign file = site.static_files | where: "path", audio_path | first %}
+
+
                 {% if audio_file.path == "/audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" %}
                   <audio controls>
                       <source src="/audio/proverbs/proverb_{{ latest_post.proverb_id }}.mp3" type="audio/mp3">
                   </audio>
                 {% endif %}
-              {{ audio_file.path }}
             {% endfor %}
 
             {% for static_file in site.static_files %}
