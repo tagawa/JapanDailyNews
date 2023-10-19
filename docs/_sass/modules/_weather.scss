@@ -1,3 +1,11 @@
+.weather {
+  margin-bottom: 1em;
+}
+
+.weather summary {
+  cursor: pointer;
+}
+
 .weather img {
   max-height: 24px;
   margin: 0 0.2em 0;
