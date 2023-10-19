@@ -15,11 +15,11 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
     </p>
 
     {% if latest_post.weather_tokyo_image != blank and latest_post.weather_tokyo_maxtemp != blank and latest_post.weather_tokyo_description != blank -%}
-      <details>
+      <details class="weather">
         <summary>
-          Tokyo: <img src="/images/weather/{{ latest_post.weather_tokyo_image }}" alt="{{ latest_post.weather_tokyo_description }}." title="{{ latest_post.weather_tokyo_description }}." style="max-height: 24px; margin: 0 0.5em 0 1em; vertical-align: middle;"> Max. {{ latest_post.weather_tokyo_maxtemp }}°C (Show more cities…)
+          Tokyo: <img src="/images/weather/{{ latest_post.weather_tokyo_image }}" alt="{{ latest_post.weather_tokyo_description }}." title="{{ latest_post.weather_tokyo_description }}."> Max. {{ latest_post.weather_tokyo_maxtemp }}°C [Show/hide cities…]
         </summary>
-        Osaka: <img src="/images/weather/{{ latest_post.weather_osaka_image }}" alt="{{ latest_post.weather_osaka_description }}." title="{{ latest_post.weather_osaka_description }}." style="max-height: 24px; margin: 0 0.5em 0 1em; vertical-align: middle;"> Max. {{ latest_post.weather_osaka_maxtemp }}°C
+        Osaka: <img src="/images/weather/{{ latest_post.weather_osaka_image }}" alt="{{ latest_post.weather_osaka_description }}." title="{{ latest_post.weather_osaka_description }}."> Max. {{ latest_post.weather_osaka_maxtemp }}°C
       </details>
     {%- endif %}
 
