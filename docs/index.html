@@ -71,7 +71,7 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
             </picture>
           {% endif %}
           
-          <p>{{ latest_post.proverb_ja }}<br><small>({{ latest_post.proverb_hiragana }})</small>
+          <p lang="ja">{{ latest_post.proverb_ja }}<br><small>({{ latest_post.proverb_hiragana }})</small>
             
             {% assign audio_path = "/audio/proverbs/proverb_" | append: latest_post.proverb_id | append: ".mp3" %}
             {% assign file = site.static_files | where: "path", audio_path | first %}
