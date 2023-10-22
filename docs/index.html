@@ -42,6 +42,11 @@ summary: Today's news from Japan, powered by AI. This computer-generated daily p
 <div>
     {{ latest_post.content }}
 
+    <h3>News sources (Japanese)</h3>
+    <ul>
+      <li><a href="{{ latest_post.link }}" target="_blank" rel="noopener">{{ latest_post.title }}</a></li>
+    </ul>
+  
     <p><em>Audio read by {{ latest_post.voices }}</em></p>
 </div>
 
