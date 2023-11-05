@@ -10,7 +10,7 @@ permalink: /proverbs
   
 <div class="card-grid">
   
-    {% for proverb in site.data.proverbs offset:1 %}
+    {% for proverb in site.data.proverbs %}
       <div class="cards">
         <h2>
           <a class="post-link" href="{{ proverb.url }}">{{ proverb.Proverb }}</a>
