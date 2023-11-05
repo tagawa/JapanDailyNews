@@ -16,7 +16,7 @@ permalink: /proverbs
           <a class="post-link" href="{{ proverb.url }}">{{ proverb.Proverb }}</a>
         </h2>
         <p class="meta">{{ proverb.Hiragana }}</p>
-        <p>{{ proverb.summary }} </p>
+        <p>{{ proverb.EngMeaning }} </p>
       </div>
     {% endfor %}
     
