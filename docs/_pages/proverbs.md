@@ -13,9 +13,9 @@ permalink: /proverbs
     {% for proverb in site.data.proverbs offset:1 %}
       <div class="cards">
         <h2>
-          <a class="post-link" href="{{ proverb.url }}">{{ proverb.title }}</a>
+          <a class="post-link" href="{{ proverb.url }}">{{ proverb.Proverb }}</a>
         </h2>
-        <p class="meta">{{ proverb.date }}</p>
+        <p class="meta">{{ proverb.Hiragana }}</p>
         <p>{{ proverb.summary }} </p>
       </div>
     {% endfor %}
