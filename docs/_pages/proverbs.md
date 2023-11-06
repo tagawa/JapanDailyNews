@@ -6,7 +6,6 @@ permalink: /proverbs
 ---
 <main class="list">
   <p>{{ page.summary }}</p>
-  <p>A work in progress…</p>
   
 <div class="card-grid">
   
