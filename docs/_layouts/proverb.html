@@ -4,9 +4,18 @@ layout: default
 <main class="proverb">
 
   <style>
+    
     /* Breadcrumb styles */
+.breadcrumbs {
+  list-style: none; /* Remove list markers */
+  padding: 0;
+  margin: 0;
+  display: block; /* Display list items in a row */
+  align-items: center; /* Align items vertically */
+}
+
 nav .breadcrumbs li, nav .breadcrumbs li a:hover, nav .breadcrumbs li a:focus {
-    flex-grow: 0;
+  display: inline;
     min-width: 0;
     margin: 0px 0px;
     border: none;
@@ -15,14 +24,6 @@ nav .breadcrumbs li, nav .breadcrumbs li a:hover, nav .breadcrumbs li a:focus {
 
 nav .breadcrumbs li a {
   color: #a95800;
-}
-
-.breadcrumbs {
-  list-style: none; /* Remove list markers */
-  padding: 0;
-  margin: 0;
-  display: flex; /* Display list items in a row */
-  align-items: center; /* Align items vertically */
 }
 
 .breadcrumb-item {
