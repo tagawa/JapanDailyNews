@@ -20,20 +20,18 @@ layout: default
     
     <div class="container extra-padding">
 
-      {{ page.id }}
-      <br>
-      {{ page.name }}
+      {{ page.proverb_id }}
         
   {% if page.id %}
   <figure>
-    <img src="/images/proverbs/{{ page.id }}.webp" alt="Illustration representing the Japanese proverb {{ page.title}}">
+    <img src="/images/proverbs/{{ page.proverb_id }}.webp" alt="Illustration representing the Japanese proverb {{ page.title}}">
     <figcaption>{{ page.title }}</figcaption>
   </figure>
   {% endif %}
 
 
       
-          {% assign image_path = "/images/proverbs/proverb_" | append: page.id | append: ".webp" %}
+          {% assign image_path = "/images/proverbs/proverb_" | append: page.proverb_id | append: ".webp" %}
           {% assign file = site.static_files | where: "path", image_path | first %}
           {% if file %}
             <picture>
@@ -43,7 +41,7 @@ layout: default
           
           <p lang="ja">{{ page.title }}<br><small>({{ page.hiragana }})</small>
             
-            {% assign audio_path = "/audio/proverbs/proverb_" | append: page.id | append: ".mp3" %}
+            {% assign audio_path = "/audio/proverbs/proverb_" | append: page.proverb_id | append: ".mp3" %}
             {% assign file = site.static_files | where: "path", audio_path | first %}
             {% if file %}
               <audio controls>
