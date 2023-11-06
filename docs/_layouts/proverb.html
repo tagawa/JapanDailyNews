@@ -3,6 +3,37 @@ layout: default
 ---
 <main class="proverb">
 
+  <style>
+    /* Breadcrumb styles */
+
+.breadcrumb {
+  list-style: none; /* Remove list markers */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display list items in a row */
+  align-items: center; /* Align items vertically */
+}
+
+.breadcrumb-item {
+  margin-right: 0.5em; /* Space between items */
+}
+
+.breadcrumb-item::after {
+  content: '>'; /* Separator character */
+  margin-left: 0.5em;
+}
+
+.breadcrumb-item:last-child::after {
+  content: ''; /* No separator after the last item */
+}
+
+.breadcrumb-item a {
+  text-decoration: none; /* Optional: Removes underline from links */
+  color: inherit; /* Optional: Link color matches the text color */
+}
+
+  </style>
+
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
