@@ -2,6 +2,15 @@
 layout: default
 ---
 <main class="proverb">
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/proverbs">Japanese Proverbs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+  </ol>
+</nav>
+
 <article>
 
     
@@ -59,4 +68,32 @@ layout: default
         
     </div>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://japandailynews.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Japanese Proverbs",
+      "item": "https://japandailynews.com/proverbs"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ page.title }}",
+      "item": "https://japandailynews.com/proverb/{{ page.id }}"
+    }
+  ]
+}
+</script>
+    
 </main>
