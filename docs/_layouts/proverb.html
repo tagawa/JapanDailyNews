@@ -11,6 +11,14 @@ layout: default
     
     <div class="container extra-padding">
 
+        
+  {% if page.id %}
+  <figure>
+    <img src="/images/proverbs/{{ page.id }}.webp" alt="Illustration representing the Japanese proverb {{ page.title}}">
+    <figcaption>{{ page.title }}</figcaption>
+  </figure>
+  {% endif %}
+
     
   <section>
     {% if page.hiragana %}
