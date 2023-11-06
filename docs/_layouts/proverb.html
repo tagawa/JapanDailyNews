@@ -73,9 +73,11 @@ nav .breadcrumbs li a {
             {% assign audio_path = "/audio/proverbs/proverb_" | append: page.proverb_id | append: ".mp3" %}
             {% assign file = site.static_files | where: "path", audio_path | first %}
             {% if file %}
+              <div>
               <audio controls>
                   <source src="{{ audio_path }}" type="audio/mp3">
               </audio>
+              </div>
             {% endif %}
 
             
@@ -87,9 +89,11 @@ nav .breadcrumbs li a {
   </section>
 
   {% if page.common %}
-  <section>
+  <!--
+      <section>
     <p><strong>How common?</strong> {{ page.common }}</p>
   </section>
+  -->
   {% endif %}
 
   {% if page.meaning %}
