@@ -13,7 +13,11 @@ permalink: /proverbs
     {% for proverb in site.data.proverbs %}
       <div class="cards">
         <h2>
-          <a class="post-link" href="{{ proverb.url }}">{{ proverb.Proverb }}</a>
+
+        
+          {% assign url = "/proverb/" | append: proverb.ID %}
+          
+          <a class="post-link" href="{{ url }}">{{ proverb.Proverb }}</a>
         </h2>
         <p class="meta">{{ proverb.Hiragana }}</p>
         <p>{{ proverb.EngMeaning }} </p>
