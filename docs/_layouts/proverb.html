@@ -4,12 +4,55 @@ layout: default
 <main class="proverb">
 <article>
 
+    
     <div class="center-content">
-    <h1 class="proverb-title">{{ page.title }}</h1>
+    <h1 class="proverb-title">{{ content }}</h1>
     </div>
     <div class="container extra-padding">
         {{ content }}
     </div>
 
+    
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.hiragana %}
+    <p><strong>Hiragana:</strong> {{ page.hiragana }}</p>
+    {% endif %}
+  </header>
+
+  <section>
+    <p><strong>Proverb:</strong> {{ content }}</p>
+  </section>
+
+  {% if page.common %}
+  <section>
+    <p><strong>Common Use:</strong> {{ page.common }}</p>
+  </section>
+  {% endif %}
+
+  {% if page.meaning %}
+  <section>
+    <h2>Meaning</h2>
+    <p>{{ page.meaning }}</p>
+  </section>
+  {% endif %}
+
+  {% if page.engmeaning %}
+  <section>
+    <h2>English Meaning</h2>
+    <p>{{ page.engmeaning }}</p>
+  </section>
+  {% endif %}
+
+  {% if page.engtranslation %}
+  <section>
+    <h2>English Translation</h2>
+    <p>{{ page.engtranslation }}</p>
+  </section>
+  {% endif %}
+
+  <footer>
+    <a href="/proverbs">&laquo; Back to Proverbs List</a>
+  </footer>
 </article>
 </main>
