@@ -28,6 +28,27 @@ layout: default
   </figure>
   {% endif %}
 
+
+      
+          {% assign image_path = "/images/proverbs/proverb_" | append: page.id | append: ".webp" %}
+          {% assign file = site.static_files | where: "path", image_path | first %}
+          {% if file %}
+            <picture>
+                <img src="{{ image_path }}" alt="Illustration representing the proverb {{ page.title }}" style="max-width: 200px;" class="illustration">
+            </picture>
+          {% endif %}
+          
+          <p lang="ja">{{ page.title }}<br><small>({{ latest_post.proverb_hiragana }})</small>
+            
+            {% assign audio_path = "/audio/proverbs/proverb_" | append: page.id | append: ".mp3" %}
+            {% assign file = site.static_files | where: "path", audio_path | first %}
+            {% if file %}
+              <audio controls>
+                  <source src="{{ audio_path }}" type="audio/mp3">
+              </audio>
+            {% endif %}
+
+            
     
   <section>
     {% if page.hiragana %}
