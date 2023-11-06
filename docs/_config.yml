@@ -19,6 +19,20 @@ github_username: tagawa
 
 #permalink: /:year/:title.html
 
+#For the proverb pages
+collections:
+  proverbs:
+    output: true
+    permalink: /proverb/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: proverbs
+    values:
+      layout: proverb
+
+
 #Timezone
 timezone: Asia/Tokyo
 
