@@ -23,7 +23,7 @@ github_username: tagawa
 collections:
   proverbs:
     output: true
-    permalink: /proverb/:name/
+    permalink: /proverbs/:name/
 
 defaults:
   - scope:
