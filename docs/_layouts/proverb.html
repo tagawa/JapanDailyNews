@@ -66,8 +66,6 @@ nav .breadcrumbs li {
             </picture>
           {% endif %}
           
-          <p lang="ja">{{ page.title }}<br><small>({{ page.hiragana }})</small></p>
-            
             {% assign audio_path = "/audio/proverbs/proverb_" | append: page.proverb_id | append: ".mp3" %}
             {% assign file = site.static_files | where: "path", audio_path | first %}
             {% if file %}
